@@ -12,8 +12,6 @@ import os
 
 load_dotenv()
 
-API = os.getenv("API_ENDPOINT")  
-
 Alunos = [
     {"numeroEst": "12345", "senha": "abc123"},
     {"numeroEst": "67890", "senha": "senha456"},
@@ -28,6 +26,8 @@ class ActionFindCourse(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        API = os.getenv("API_ENDPOINT")  
         
         if not API:
             dispatcher.utter_message(text="⚠️ O sistema está fora do ar no momento. Tente mais tarde.")
