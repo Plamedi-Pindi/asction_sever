@@ -17,6 +17,9 @@ Alunos = [
     {"numeroEst": "67890", "senha": "senha456"},
 ]  
 
+print("✅ O arquivo actions.py foi carregado com sucesso.")
+
+
 ########## #############
 class ActionFindCourse(Action):
 
