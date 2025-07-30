@@ -9,6 +9,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY start.sh /app/start.sh
 RUN chmod +x /app/start.sh
+COPY actions.py /app/actions.py
 
 ENTRYPOINT []
 
