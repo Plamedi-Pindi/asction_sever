@@ -19,6 +19,15 @@ Alunos = [
 
 print("✅ O arquivo actions.py foi carregado com sucesso.")
 
+from rasa_sdk.interfaces import Action
+
+print("📦 Verificando ações registradas:")
+for cls in Action.__subclasses__():
+    try:
+        print(f"➡️ {cls().name()}")
+    except Exception as e:
+        print(f"❌ Falha ao carregar {cls.__name__}: {e}")
+
 
 ########## #############
 class ActionFindCourse(Action):
