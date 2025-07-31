@@ -11,9 +11,6 @@ if [ -z "$PORT" ]; then
   exit 1
 fi
 
-print("📦 Ações registradas:")
-for cls in Action.__subclasses__():
-    print(f"➡️ {cls().name()}")
 
 # Inicia o servidor
 exec python -m rasa_sdk.endpoint --port "$PORT"
