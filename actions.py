@@ -22,7 +22,6 @@ print("✅ O arquivo actions.py foi carregado com sucesso.")
 
 ########## #############
 class ActionFindCourse(Action):
-
     def name(self) -> Text:
         return "action_consultar_curso"
 
@@ -71,7 +70,7 @@ class ActionFindCourse(Action):
         return []
 
 
-class ActiolnValidarCredenciais(Action):
+class ActionValidarCredenciais(Action):
 
     def name(self) -> Text:
         return "action_validar_credenciais"
