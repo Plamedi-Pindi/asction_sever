@@ -21,13 +21,6 @@ print("✅ O arquivo actions.py foi carregado com sucesso.")
 
 from rasa_sdk.interfaces import Action
 
-# print("📦 Verificando ações registradas:")
-# for cls in Action.__subclasses__():
-#     try:
-#         print(f"➡️ {cls().name()}")
-#     except Exception as e:
-#         print(f"❌ Falha ao carregar {cls.__name__}: {e}")
-
 
 ########## #############
 class ActionFindCourse(Action):
@@ -163,13 +156,13 @@ class ActionAskOpenAI(Action):
         
 
 # ✅ Verificar quais ações foram registradas
-if __name__ == "__main__" or True:  # Garante execução no Docker
-    print("📦 Verificando ações registradas:")
-    for cls in Action.__subclasses__():
-        try:
-            print(f"➡️ {cls().name()}")
-        except Exception as e:
-            print(f"❌ Falha ao carregar {cls.__name__}: {e}")
+# if __name__ == "__main__" or True:  # Garante execução no Docker
+#     print("📦 Verificando ações registradas:")
+#     for cls in Action.__subclasses__():
+#         try:
+#             print(f"➡️ {cls().name()}")
+#         except Exception as e:
+#             print(f"❌ Falha ao carregar {cls.__name__}: {e}")
 
 
 # This is a simple example for a custom action which utters "Hello World!"
