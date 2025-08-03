@@ -8,7 +8,7 @@ COPY . /app
 # Instala as dependências
 RUN pip install --no-cache-dir -r requirements.txt
 
-ENV PYTHONPATH "${PYTHONPATH}:/app/actions"
+# ENV PYTHONPATH "${PYTHONPATH}:/app/actions"
 
 # Expõe a porta usada pelo action server
 EXPOSE 5055
