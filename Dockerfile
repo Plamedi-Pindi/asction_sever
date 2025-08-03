@@ -1,20 +1,15 @@
-FROM rasa/rasa-sdk:3.6.0
-
-USER root
+FROM python:3.10
 
 WORKDIR /app
 
-# Copia só requirements para instalar dependências primeiro e aproveitar cache
-COPY requirements.txt /app/
-
-RUN pip install --no-cache-dir -r requirements.txt
-
+# Copia os arquivos do projeto
 COPY . /app
 
-# COPY start.sh /app/start.sh
-# COPY actions.py /app/actions.py
-RUN chmod +x /app/start.sh
+# Instala as dependências
+RUN pip install --no-cache-dir -r requirements.txt
 
-ENTRYPOINT []
+# Expõe a porta usada pelo action server
+EXPOSE 5055
 
-CMD ["./start.sh"]
+# Comando de inicialização
+CMD ["python", "-m", "rasa_sdk", "--port", "5055"]
