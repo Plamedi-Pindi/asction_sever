@@ -3,5 +3,5 @@ python-dotenv
 pymongo  
 openai
 # rasa-sdk
-rasa-sdk==3.6.0
+rasa-sdk==3.6.2
 markupsafe==2.0.1
