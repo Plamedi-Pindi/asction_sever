@@ -155,7 +155,7 @@ class ActionAskOpenAI(Action):
         return []
         
 
-✅ Verificar quais ações foram registradas
+# ✅ Verificar quais ações foram registradas
 if __name__ == "__main__" or True:  # Garante execução no Docker
     print("📦 Verificando ações registradas:")
     for cls in Action.__subclasses__():
