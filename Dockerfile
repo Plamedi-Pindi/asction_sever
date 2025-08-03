@@ -12,4 +12,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5055
 
 # Comando de inicialização
-CMD ["python", "-m", "rasa_sdk", "--port", "5055"]
+CMD ["python", "-m", "actions.actions", "--port", "5055"]
