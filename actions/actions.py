@@ -17,7 +17,7 @@ Alunos = [
     {"numeroEst": "67890", "senha": "senha456"},
 ]  
 
-print("✅ O arquivo actions.py foi carregado com sucesso.")
+# print("✅ O arquivo actions.py foi carregado com sucesso.")
 
 from rasa_sdk.interfaces import Action
 
